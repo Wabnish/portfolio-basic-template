@@ -1,0 +1,156 @@
+* {
+  margin: 0%;
+  padding: 0%;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0 auto;
+  max-width: 1200px;
+  color: #01161e;
+  background: #01161e;
+}
+
+header {
+  min-height: 10vh;
+  color: #eff6e0;
+}
+
+header,
+footer {
+  background: #598392;
+  display: flex;
+  justify-content: space-between;
+}
+
+h1 {
+  position: relative;
+  left: 2rem;
+  top: 0.5rem;
+}
+
+ul {
+  list-style-type: none;
+  display: flex;
+}
+
+li {
+  padding: 1rem;
+}
+
+footer {
+  min-height: 15vh;
+}
+
+.subtitle {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  background: #124559;
+  min-height: 15vh;
+  color: #eff6e0;
+}
+
+.subtitle h2 {
+  position: relative;
+  right: 15%;
+}
+
+.about-me {
+  background: #aec3b0;
+  min-height: 20vh;
+  display: flex;
+  justify-content: space-between;
+}
+
+.about-me p {
+  align-self: center;
+  padding: 5rem;
+}
+
+.about-me h2,
+.work h2,
+.contact h2 {
+  min-width: 20%;
+  border-right: 5px solid #01161e;
+  margin: 20px 0 20px 0;
+  display: flex;
+  justify-content: flex-end;
+  padding-right: 20px;
+  /* Prevents growing and shrinking of the side bar elements */
+  flex: 0 0 20%;
+  font-size: 2em;
+}
+
+.work {
+  background: #aec3b0;
+  min-height: 40vh;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.work-box {
+  height: 100%;
+}
+
+.work-grid {
+  padding-top: 2%;
+  padding-bottom: 2%;
+  margin: 0 auto;
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: 400px 400px;
+  grid-template-areas:
+    'one one'
+    'one one'
+    'two three'
+    'four five';
+  grid-auto-rows: 200px;
+}
+
+.work-grid a {
+  display: block;
+  min-height: 100%;
+  width: 100%;
+
+  background-size: cover;
+  background-position: center;
+  border: 1px solid #01161e;
+  text-decoration: none;
+  color: #eff6e0;
+}
+
+.project-1 {
+  grid-area: one;
+  background-image: url('https://placecats.com/millie/300/150');
+}
+
+.project-2 {
+  grid-area: two;
+  background-image: url('https://placecats.com/neo/300/200');
+}
+
+.project-3 {
+  grid-area: three;
+  background-image: url('https://placecats.com/millie_neo/300/200');
+}
+
+.project-4 {
+  grid-area: four;
+  background-image: url('https://placecats.com/neo_2/300/200');
+}
+
+.project-5 {
+  grid-area: five;
+  background-image: url('https://placecats.com/louie/300/200');
+}
+
+.work-grid a > div {
+  position: relative;
+  top: 75%;
+  left: 5%;
+}
+
+.contact {
+  background: #aec3b0;
+}
