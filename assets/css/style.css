@@ -9,6 +9,7 @@ body {
   max-width: 1200px;
   color: #01161e;
   background: #01161e;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 header {
@@ -16,17 +17,20 @@ header {
   color: #eff6e0;
 }
 
+header h1 {
+  background: #01161e;
+  margin: 1% 1% 1% 0;
+  width: 40%;
+  text-align: end;
+  font-size: 3.5em;
+  padding-right: 1%;
+}
+
 header,
 footer {
   background: #598392;
   display: flex;
   justify-content: space-between;
-}
-
-h1 {
-  position: relative;
-  left: 2rem;
-  top: 0.5rem;
 }
 
 ul {
@@ -40,6 +44,15 @@ li {
 
 footer {
   min-height: 15vh;
+}
+.nav-bar {
+  align-self: center;
+}
+
+.nav-bar li {
+  font-size: 1.8em;
+  color: #01161e;
+  text-decoration: underline;
 }
 
 .subtitle {
@@ -66,6 +79,7 @@ footer {
 .about-me p {
   align-self: center;
   padding: 5rem;
+  font-size: 1.5rem;
 }
 
 .about-me h2,
@@ -109,15 +123,29 @@ footer {
 }
 
 .work-grid a {
+  position: relative;
   display: block;
   min-height: 100%;
   width: 100%;
-
   background-size: cover;
   background-position: center;
-  border: 1px solid #01161e;
+  border: 3px solid #01161e;
   text-decoration: none;
   color: #eff6e0;
+  overflow: hidden;
+}
+
+.work-grid a::before {
+  position: absolute;
+  inset: 0;
+  content: '';
+  background: rgba(226, 230, 231, 0.5);
+  z-index: 1;
+  transition: all 1s ease;
+}
+
+.work-grid a:hover::before {
+  background: rgba(226, 230, 231, 0);
 }
 
 .project-1 {
@@ -146,11 +174,35 @@ footer {
 }
 
 .work-grid a > div {
+  display: flex;
   position: relative;
+  padding: 3%;
   top: 75%;
-  left: 5%;
+  background: #01161e;
+  width: 30%;
+  height: 25%;
+  text-align: end;
+  justify-content: end;
+  align-items: center;
+  z-index: 2;
 }
 
 .contact {
   background: #aec3b0;
+}
+
+.contact ul {
+  align-self: center;
+  margin: 0 auto;
+}
+
+.social-links a,
+.social-links p {
+  text-decoration: underline;
+  color: #01161e;
+  font-size: 2em;
+}
+
+#hero-project {
+  font-size: 2rem;
 }
