@@ -4,6 +4,10 @@
   box-sizing: border-box;
 }
 
+html {
+  scroll-padding-top: 10vh; /* or match your header height */
+}
+
 body {
   margin: 0 auto;
   max-width: 1200px;
@@ -14,7 +18,12 @@ body {
 
 header {
   min-height: 10vh;
+  width: 100%;
+  max-width: 1200px;
   color: #eff6e0;
+  position: sticky;
+  z-index: 5;
+  top: 0;
 }
 
 header h1 {
@@ -49,7 +58,7 @@ footer {
   align-self: center;
 }
 
-.nav-bar li {
+.nav-bar li > a {
   font-size: 1.8em;
   color: #01161e;
   text-decoration: underline;
