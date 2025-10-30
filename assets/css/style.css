@@ -5,7 +5,7 @@
 }
 
 html {
-  scroll-padding-top: 10vh; /* or match your header height */
+  scroll-padding-top: 10vh; /* to prevent the header from covering the about us section when clicking the about link */
 }
 
 body {
@@ -14,6 +14,7 @@ body {
   color: #01161e;
   background: #01161e;
   font-family: Arial, Helvetica, sans-serif;
+  width: 100%;
 }
 
 header {
@@ -29,7 +30,7 @@ header {
 header h1 {
   background: #01161e;
   margin: 1% 1% 1% 0;
-  width: 40%;
+  width: 50%;
   text-align: end;
   font-size: 3.5em;
   padding-right: 1%;
@@ -87,7 +88,7 @@ footer {
 
 .about-me p {
   align-self: center;
-  padding: 5rem;
+  padding: 5%;
   font-size: 1.5rem;
 }
 
@@ -214,4 +215,153 @@ footer {
 
 #hero-project {
   font-size: 2rem;
+}
+
+@media screen and (max-width: 1080px) {
+  .work-grid {
+    grid-template-columns: 300px 300px;
+  }
+
+  .work-grid a > div {
+    width: 35%;
+    height: 25%;
+  }
+}
+
+@media screen and (max-width: 980px) {
+  html,
+  body {
+    overflow-x: hidden;
+  }
+
+  header h1 {
+    width: 75%;
+    text-align: center;
+    padding: 0 1% 0 1%;
+  }
+
+  header,
+  .about-me,
+  .work,
+  .contact {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .about-me h2,
+  .work h2,
+  .contact h2 {
+    border-bottom: 5px solid #01161e;
+    border-right: 0;
+    margin: 0;
+    padding-top: 2%;
+    padding-right: 0;
+    justify-content: center;
+    width: 60vw;
+  }
+
+  .social-links a {
+    font-size: 1.3em;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  header h1 {
+    font-size: 2.5rem;
+  }
+
+  .subtitle {
+    justify-content: center;
+  }
+
+  .subtitle h2 {
+    right: 0;
+  }
+
+  .about-me p {
+    align-self: auto;
+    font-size: 1.4rem;
+  }
+
+  .about-me h2,
+  .work h2,
+  .contact h2 {
+    font-size: 1.5rem;
+    border-bottom: 3px solid #01161e;
+  }
+
+  .work-grid {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      'one'
+      'two'
+      'three'
+      'four'
+      'five';
+    grid-auto-rows: auto;
+    min-width: 90%;
+  }
+
+  .work-grid a {
+    min-height: 400px;
+  }
+
+  .work-grid a > div {
+    width: 50%;
+    height: 25%;
+    font-size: 2rem;
+  }
+
+  .nav-bar li > a {
+    font-size: 1.4em;
+    color: #01161e;
+    text-decoration: underline;
+  }
+
+  .social-links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 1rem;
+    background-color: #eff6e0; /* optional for visual clarity */
+    border: 2px solid #01161e;
+  }
+
+  .contact h2 {
+    font-size: 1.4rem;
+    margin-bottom: 1rem;
+  }
+
+  .contact ul {
+    display: grid !important;
+    grid-template-columns: 200px 200px;
+    grid-template-areas:
+      'phone phone'
+      'email github'
+      'insta linkedin';
+    gap: 1rem;
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 2rem 1rem;
+  }
+
+  #phone {
+    grid-area: phone;
+  }
+  #email {
+    grid-area: email;
+  }
+  #github {
+    grid-area: github;
+  }
+  #insta {
+    grid-area: insta;
+  }
+  #linkedin {
+    grid-area: linkedin;
+  }
+}
+
+@media screen and (max-width: 550px) {
 }
